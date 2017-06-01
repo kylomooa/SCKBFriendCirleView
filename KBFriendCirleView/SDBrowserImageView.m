@@ -102,10 +102,10 @@
     
     __weak SDBrowserImageView *imageViewWeak = self;
     
-    [self setImageWithURL:url placeholderImage:placeholder options:SDWebImageRetryFailed progress:^(NSInteger receivedSize,  NSInteger expectedSize) {
+    [self sd_setImageWithURL:url placeholderImage:placeholder options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         imageViewWeak.progress = (CGFloat)receivedSize / expectedSize;
-
-    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+        
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         [imageViewWeak removeWaitingView];
         
         
@@ -125,7 +125,6 @@
             _scrollImageView.image = image;
             [_scrollImageView setNeedsDisplay];
         }
-
     }];
 }
 

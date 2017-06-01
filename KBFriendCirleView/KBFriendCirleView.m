@@ -100,7 +100,7 @@
         //        [imageView yy_setImageWithURL:[NSURL URLWithString:obj] options:YYWebImageOptionProgressive];
         //        [imageView sd_setImageWithURL:[NSURL URLWithString:obj]];
         imageView.frame = CGRectMake(columnIndex * (itemW + margin), rowIndex * (itemH + margin), itemW, itemH);
-                [imageView yy_setImageWithURL:[NSURL URLWithString:obj]  placeholder:[SCTools createImageWithColor:WEBRBGCOLOR(0xEEEEEE) withRect:imageView.bounds] options:YYWebImageOptionSetImageWithFadeAnimation completion:nil];
+//                [imageView yy_setImageWithURL:[NSURL URLWithString:obj]  placeholder:[SCTools createImageWithColor:WEBRBGCOLOR(0xEEEEEE) withRect:imageView.bounds] options:YYWebImageOptionSetImageWithFadeAnimation completion:nil];
 //        [imageView setImageWithURL:[NSURL URLWithString:obj] placeholderImage:[SCTools createImageWithColor:WEBRBGCOLOR(0xEEEEEE) withRect:imageView.bounds]];
         
     }];
